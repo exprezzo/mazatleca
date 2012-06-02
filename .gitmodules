@@ -1,0 +1,3 @@
+[submodule "mazatleca_core"]
+	path = mazatleca_core
+	url = https://exprezzo@github.com/exprezzo/mazatleca_core.git
