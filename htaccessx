@@ -13,8 +13,8 @@
 	#RewriteRule ^administracion.html mvc_core/frontc.php/administracion [NC,L] # Handle requests for	#	
 	#RewriteRule ^monitoreo.html 	 mvc_core/frontc.php/monitoreo [NC,L] 										# monitoreo.html	
 	  	
-	RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /mazatleca_core/frontc.php/$1 [L]
-	ErrorDocument 500 error500.html
+	#RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^(.*)$ /mazatleca_core/frontc.php/$1 [L]
+	#ErrorDocument 500 error500.html
 </IfModule>
