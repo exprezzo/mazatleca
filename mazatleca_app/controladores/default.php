@@ -17,7 +17,7 @@ class DefaultController extends Controlador{
 		$this->renderVista('CONTACT','default/contact.html.php');				
 	}
 		
-	private function renderVista($menuText,$contenido){	
+	private function renderVista($menuText,$contenido){
 		$pagina= new Pagina();			
 		
 		$menu =  new Menu('default/menu.html.php');		
