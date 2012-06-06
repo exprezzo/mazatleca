@@ -61,7 +61,7 @@ ul#navlist {
 	border-bottom:3px solid #226669;
 	text-decoration: none;
 }
-#navlist #active a {
+#navlist .active a {
 	color: #226669;
 	border-bottom:3px solid #226669;
 	text-decoration: none;
