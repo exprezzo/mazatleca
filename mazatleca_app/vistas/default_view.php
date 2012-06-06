@@ -7,13 +7,13 @@ class DefaultView extends Vista{
 	
 	function DefaultView($menuText,$rutaContenido){
 		parent::__construct();
-		$this->nombre=$menuText;
-		$this->rutaContenido=$rutaContenido;		
+		//$this->nombre=$menuText;
+		//$this->rutaContenido=$rutaContenido;		
 	}
 		
-	function render($rutaContenido=null){
+	/*function render($rutaContenido=null){
 		include ($this->rutaContenido);
-	}
+	}*/
 	
 }
 
