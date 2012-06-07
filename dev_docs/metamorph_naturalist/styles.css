@@ -1,6 +1,6 @@
 @import "reset.css";
 
-body {background:#0E76BD url(../images/bg_site.jpg); font-family:Arial;	font-size:12px;	line-height:16px;	color:#000;	margin:0; padding:0; text-align:}
+body {background:#0E76BD url(images/bg_site.jpg); font-family:Arial;	font-size:12px;	line-height:16px;	color:#000;	margin:0; padding:0; text-align:}
 
 .clear {clear:both;}
 .left{ float:left}
@@ -33,12 +33,12 @@ color: #ffffff;
 /*====== footer =====*/
 
 #bottom {
-	background: url(../images/bottom.gif) 43px 30px no-repeat;
+	background: url(images/bottom.gif) 43px 30px no-repeat;
 	color: #FFFFFF;
 }
 
 #bottom_bot {
-	background: url(../images/bottom.gif) 43px bottom no-repeat;
+	background: url(images/bottom.gif) 43px bottom no-repeat;
 	color: #FFFFFF;
 }
 
@@ -70,7 +70,7 @@ color: #ffffff;
 
 .box_us {
 width: 244px;
-background: url(../images/box_us.gif) 0px bottom repeat-x;
+background: url(images/box_us.gif) 0px bottom repeat-x;
 }
 
 .box_us_l {
@@ -93,7 +93,7 @@ float: left;}
 
 .spis_bot li {
 	padding: 7px 0px 0px 18px;
-	background: url(../images/fish2.gif) 0px 12px no-repeat;
+	background: url(images/fish2.gif) 0px 12px no-repeat;
 	}
 	
 .spis_bot a {
@@ -130,13 +130,13 @@ float: left;}
 }
 
 
-.header .nav{ position:relative; height:50px; width:910px; background:url(../images/bg_menu.png) top no-repeat; padding-left:56px; padding-right:24px; }
+.header .nav{ position:relative; height:50px; width:910px; background:url(images/bg_menu.png) top no-repeat; padding-left:56px; padding-right:24px; }
 .header .nav ul li{	float:left;}
 
 
 .header .nav ul li a{ font-size:35px; color:#fff; text-decoration:none;	display:inline-block; width:145px; height:40px; text-align:center; padding-top: 10px}
 .header .nav ul li.active a{ height: 64px; margin-top: -8px;}
-.header .nav ul li a:hover{ /*height: 64px; margin-top: -8px;*/}
+.header .nav ul li a:hover{ height: 64px; margin-top: -8px;}
 
 
 
@@ -148,13 +148,13 @@ float: left;}
 
 
 
-div.bg_content{ background:url(../images/bg_content.png) top repeat;  height:445px; margin-top:40px; position:relative; z-index:2}
+div.bg_content{ background:url(images/bg_content.png) top repeat;  height:445px; margin-top:40px; position:relative; z-index:2}
 div.content{ position: absolute; z-index:1; height:380px; width:850px; padding:35px 0px 0px 35px; overflow:hidden}
 
-#content a.prev{ position:absolute;	left:30px;	top:76px;	background:url(../images/left.png) top no-repeat;	width:22px;	height:30px; z-index:100}
+#content a.prev{ position:absolute;	left:30px;	top:76px;	background:url(images/left.png) top no-repeat;	width:22px;	height:30px; z-index:100}
 #content a.prev:hover{	background-position:bottom;}
 
-#content a.next{position:absolute;	right:28px;	top:76px;	background:url(../images/right.png) top no-repeat;	width:22px;	height:30px; z-index:100}
+#content a.next{position:absolute;	right:28px;	top:76px;	background:url(images/right.png) top no-repeat;	width:22px;	height:30px; z-index:100}
 #content a.next:hover{	background-position: bottom;}
 
 #content strong{ text-transform:uppercase; display:block; font-size:12px; color:#000}
@@ -170,10 +170,10 @@ div.content{ position: absolute; z-index:1; height:380px; width:850px; padding:3
 div.mid{ width:1000px;  position: absolute;}
 a.bg{ display:block; width:16px; height:16px; background-repeat:no-repeat; background-position:bottom; margin-left:10px; float:left; }
 a.bg:hover{ background-position:top}
-a.bg_1{ background-image:url(../images/img_1.jpg)}
-a.bg_2{ background-image:url(../images/img_2.jpg)}
-a.bg_3{ background-image:url(../images/img_3.jpg)}
-a.bg_4{ background-image:url(../images/img_4.jpg)}
+a.bg_1{ background-image:url(images/img_1.jpg)}
+a.bg_2{ background-image:url(images/img_2.jpg)}
+a.bg_3{ background-image:url(images/img_3.jpg)}
+a.bg_4{ background-image:url(images/img_4.jpg)}
 
 img.line_2{ margin:20px 5px 0}
 .grid_1{ width:500px;}
@@ -185,10 +185,10 @@ img.line_2{ margin:20px 5px 0}
 .grid_7{ width:230px; }
 
 
-.more{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#007BB9; text-transform:uppercase; cursor:pointer; padding-left:30px; background:url(../images/bg_more.png) left no-repeat; line-height:30px; height:30px; display:block; width:100px; }
+.more{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#007BB9; text-transform:uppercase; cursor:pointer; padding-left:30px; background:url(images/bg_more.png) left no-repeat; line-height:30px; height:30px; display:block; width:100px; }
 .more:hover{ text-decoration:underline}
 
-.links{ font-size:12px; font-family:Arial, Helvetica, sans-serif; cursor:pointer; padding-left:25px; background:url(../images/bg_links.png) left no-repeat; line-height:20px; display:block; }
+.links{ font-size:12px; font-family:Arial, Helvetica, sans-serif; cursor:pointer; padding-left:25px; background:url(images/bg_links.png) left no-repeat; line-height:20px; display:block; }
 .links:hover{ text-decoration:none}
 
 
@@ -208,7 +208,7 @@ img.photo{ border:1px #b6b6b6 solid; padding:2px ; background-color:#fff}
 b{ color:#007BB9;!important; text-transform:uppercase; display:block}
 
 
-a.top_links{ display:block; color:#fff; text-decoration:none; height:13px; background:url(../images/bg_top_links.png) left bottom no-repeat; padding-left:20px; float:right}
+a.top_links{ display:block; color:#fff; text-decoration:none; height:13px; background:url(images/bg_top_links.png) left bottom no-repeat; padding-left:20px; float:right}
 a.top_links:hover{ text-decoration: underline; background-position:top left}
 
 
@@ -227,16 +227,16 @@ a.top_links:hover{ text-decoration: underline; background-position:top left}
 .jScrollPaneDragTop { position: absolute;	top: 0;	left: 0; overflow: hidden; height:0px;}
 .jScrollPaneDragBottom { overflow: hidden; height:0px; }
 
-a.jScrollArrowUp {	display: block;	position: absolute;	z-index: 1;	top: 0;	right: 0px;	text-indent: -2000px; overflow: hidden;	height: 14px; background:url(../images/top.gif) left -15px no-repeat; width:14px!important;}
+a.jScrollArrowUp {	display: block;	position: absolute;	z-index: 1;	top: 0;	right: 0px;	text-indent: -2000px; overflow: hidden;	height: 14px; background:url(images/top.gif) left -15px no-repeat; width:14px!important;}
 
-a.jScrollArrowDown { display: block; position: absolute; z-index: 1; bottom: 0;	right: 0px;	text-indent: -2000px; overflow: hidden; height: 14px; background:url(../images/foot.gif) left -15px no-repeat; width:14px!important}
+a.jScrollArrowDown { display: block; position: absolute; z-index: 1; bottom: 0;	right: 0px;	text-indent: -2000px; overflow: hidden; height: 14px; background:url(images/foot.gif) left -15px no-repeat; width:14px!important}
 
 a.jScrollArrowUp:hover, a.jScrollArrowDown:hover{ background-position:top}
 
 
 
 #contact_form td{ color:#000; padding-bottom:2px; vertical-align:top}
-.sub{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#0f6180; text-transform:uppercase; cursor:pointer; padding-left:10px; background:url(../images/bg_more.jpg) left no-repeat; line-height:30px; height:30px; display:block; width:100px; cursor:pointer; border:0}
+.sub{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#0f6180; text-transform:uppercase; cursor:pointer; padding-left:10px; background:url(images/bg_more.jpg) left no-repeat; line-height:30px; height:30px; display:block; width:100px; cursor:pointer; border:0}
 
 .sub:hover{text-decoration:underline}
 .input_contact{background-color:#dcdcdc;
@@ -266,7 +266,7 @@ a.jScrollArrowUp:hover, a.jScrollArrowDown:hover{ background-position:top}
 	
 /*===== Slide Show =====*/
 
-#faded {	width:1000px;	height:558px;	overflow: hidden;	position: absolute; z-index:0; background:url(../images/bg_slide.png) center 10px no-repeat}
+#faded {	width:1000px;	height:558px;	overflow: hidden;	position: absolute; z-index:0; background:url(images/bg_slide.png) center 10px no-repeat}
 #faded ul.show{ margin-left:5px; margin-top:10px}
 
 ul.pagination {
@@ -282,7 +282,7 @@ ul.pagination {
 
 	ul.pagination li { width:18px ; height:18px; float:left; margin-right:2px; margin-left:5px}
 		ul.pagination li a {
-		background: url(../images/disk.png) top no-repeat;
+		background: url(images/disk.png) top no-repeat;
 			display: block;
 			width: 18px;
 			height: 18px;
@@ -290,8 +290,8 @@ ul.pagination {
 			 text-indent:-999px;
 		}
 		
-		ul.pagination li a:hover {background: url(../images/disk_act.png) top no-repeat;		}		
-		ul.pagination li.current a {background:url(../images/disk_act.png) top no-repeat;		}
+		ul.pagination li a:hover {background: url(images/disk_act.png) top no-repeat;		}		
+		ul.pagination li.current a {background:url(images/disk_act.png) top no-repeat;		}
 
 
 
@@ -302,7 +302,7 @@ ul.pagination {
 .info_fieldset { border: 0px #dddddd solid; }
 .info_fieldset legend { border: 0px #dddddd solid;  color: black;   font: 13px Verdana;  padding: 2px 5px 2px 5px; -moz-border-radius: 3px; }
 
-.button { border: 0px solid #999999;  background: white; color: #007BB9; cursor:pointer; height:30px; width:100px; color:#0f6180; font-size:12px; text-transform:uppercase; text-decoration:underline; background:url(../images/bg_more.png) left 50% no-repeat}
+.button { border: 0px solid #999999;  background: white; color: #007BB9; cursor:pointer; height:30px; width:100px; color:#0f6180; font-size:12px; text-transform:uppercase; text-decoration:underline; background:url(images/bg_more.png) left 50% no-repeat}
 .button:hover{ text-decoration:none}
 
 /* Label */

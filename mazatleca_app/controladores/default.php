@@ -20,12 +20,28 @@ class DefaultController extends Controlador{
 	private function renderVista($menuText,$contenido){
 		$pagina= new Pagina();			
 		
-		$menu =  new Menu('default/menu.html.php');		
+		$menu =  new Menu('default/menu2.html.php');		
 		$pagina->setSeccion('menu',$menu);	
 		$menu->setMenuActivo($menuText);
 		
+		$menuText='CONTACT';
+		
+		$contenido='default/home.html.php';
 		$contenido =  new Vista($contenido, $menuText);
-		$pagina->setSeccion('contenido',$contenido);
+		$pagina->setSeccion('page1',$contenido);
+		
+		$contenido='default/docs.html.php';
+		$contenido =  new Vista($contenido, $menuText);
+		$pagina->setSeccion('page2',$contenido);
+		
+		$contenido='default/download.html.php';
+		$contenido =  new Vista($contenido, $menuText);
+		$pagina->setSeccion('page3',$contenido);
+		
+		$contenido='default/contact.html.php';
+		$contenido =  new Vista($contenido, $menuText);
+		$pagina->setSeccion('page4',$contenido);
+		
 		
 		$pagina->render();
 	}

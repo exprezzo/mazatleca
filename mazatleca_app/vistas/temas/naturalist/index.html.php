@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Metamorphosis Design Free CSS Website Template</title>
+<title>Mazatleca Framework</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="web/naturalist/css/styles.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" media="screen" href="themes/base/jquery.ui.all.css" />
@@ -9,46 +9,48 @@
 <script type="text/javascript" src="web/naturalist/js/cufon.js"></script>
 <script type="text/javascript" src="web/naturalist/js/English_italic_500.font.js"></script>
 <script type="text/javascript">
-    Cufon.replace(".special");
-	Cufon.replace("H1");	
+	Cufon.replace(".unselected");
+	//Cufon.replace('.unselected', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#FFFFFF, #99CCEE, #99CCFF)'});	
+   Cufon.replace(".selected");
+	Cufon.replace("H1");
+	//Cufon.replace('.selected', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#c1a681, #5e472f, #5e472f)'});	
+//Cufon.replace('h1', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#c1a681, #5e472f, #5e472f)'});	
 </script>
 
-<script  src="web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
-<!--script type="text/javascript" src="js/slidePager.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-<script type="text/javascript" src="js/jScrollPane.js"></script>
 
-<script src="js/ui/jquery.ui.core.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.widget.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.mouse.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.draggable.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.position.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.resizable.js" type="text/javascript"></script>
-<script src="js/ui/jquery.ui.dialog.js" type="text/javascript"></script>
-<script src="js/ui/jquery.effects.core.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery_header.js"></script>
-<script type="text/javascript"> $(function(){ $("#faded").faded({ speed: 500, autoplay: 8000 }); });	</script-->
+
+
+
+<script  src="web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
+<script type="text/javascript" src="web/naturalist/js/slidePager.js"></script>
+<script type="text/javascript" src="web/naturalist/js/jquery.js"></script>
+<script type="text/javascript" src="web/naturalist/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="web/naturalist/js/jScrollPane.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="themes/base/jquery.ui.all.css" />
+<script src="web/naturalist/js/ui/jquery.ui.core.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.draggable.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.position.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.resizable.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.ui.dialog.js" type="text/javascript"></script>
+<script src="web/naturalist/js/ui/jquery.effects.core.js" type="text/javascript"></script>
+<script type="text/javascript" src="web/naturalist/js/jquery_header.js"></script>
+<script type="text/javascript"> $(function(){ $("#faded").faded({ speed: 500, autoplay: 8000 }); });	</script>
 </head>
 <body >
 
 <div class="main">
 <div class="mid">
 
-    <h1 class="left" style="margin-left:20px; padding-top: 20px;"><a href="#">Metamorph_naturalist</a></h1>    
+    <h1 class="left" style="margin-left:20px; padding-top: 20px;"><a href="#">Mazatleca Framework</a></h1>    
 
 <div class="clear"></div>
 
 <div class="header">
   <div class="inner-wrap">
-	<div class="nav ">
-	  <ul>
-		<li><a href="home.html" rel="slide" class="special">Home</a></li>
-		<li><a href="docs.html" rel="slide" class="special">Docs</a></li>
-		<li><a href="download.html" rel="slide" class="special">Download</a></li>                
-		<li><a href="contact.html" rel="slide" class="special">Contacto</a></li>
-	  </ul>
-	</div>   
+		<?php $this->renderSeccion('menu'); ?>
+		
   </div>
 </div>
 <div class="clear"></div>
@@ -60,7 +62,13 @@
 <div id="content">
              		<!-- script begin -->
 							  <div id="faded" >
-                                                                
+										<ul class="show">
+                                                                  <li ><img alt="" src="images/slide_4.png" /></li>
+                                                                  <li ><img alt="" src="images/slide_2.png" /></li>
+                                                                  <li ><img alt="" src="images/slide_3.png" /></li>
+                                                                  <li ><img alt="" src="images/slide_1.png" /></li>
+                                                                  <li ><img alt="" src="images/slide_5.png" /></li>
+                                                                </ul>							
                               </div>
 				<!-- script end -->          
 
@@ -83,12 +91,41 @@
           	
 			<div class="bg_content">
                 <div class="content">
-					<?php $this->renderSeccion('contenido'); ?>
+					<?php $this->renderSeccion('page1'); ?>
 				</div>
 			</div>
 
           </div>
-          
+<!--  /////////////////////////////////////  PAGE 2 /////////////////////////////////////////// -->
+          <div class="page" id="page2">
+          	
+			<div class="bg_content">
+                <div class="content">
+					<?php $this->renderSeccion('page2'); ?>
+				</div>
+			</div>
+
+          </div>
+<!--  /////////////////////////////////////  PAGE 3 /////////////////////////////////////////// -->
+          <div class="page" id="page3">
+          	
+			<div class="bg_content">
+                <div class="content">
+					<?php $this->renderSeccion('page3'); ?>
+				</div>
+			</div>
+
+          </div>
+<!--  /////////////////////////////////////  PAGE 4 /////////////////////////////////////////// -->
+          <div class="page" id="page4">
+          	
+			<div class="bg_content">
+                <div class="content">
+					<?php $this->renderSeccion('page4'); ?>
+				</div>
+			</div>
+
+          </div>          
  
 <!--  /////////////////////////////////////  The End  /////////////////////////////////////////// -->
       
@@ -178,7 +215,7 @@
 </div> 
 
 <script type="text/javascript"> Cufon.now();
-/*$(function(){
+$(function(){
 	$('#content .pages').slidePager({
 		pagernav:'div.header div.nav ul li',
 		last:7,
@@ -186,7 +223,7 @@
 		borders:40
 	})
 });
- jQuery(".scroll-pane").jScrollPane();*/
+ jQuery(".scroll-pane").jScrollPane();
 </script>
 </div>
 </body>
