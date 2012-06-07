@@ -1,4 +1,5 @@
 <?php
+
 class DefaultController extends Controlador{
 		
 	function home($rutaContenido=null ){
