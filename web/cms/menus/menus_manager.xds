@@ -1,0 +1,156 @@
+{
+    "name": "menus_manager.xds",
+    "projectId": "65C19E70-80FA-46A1-9E27-B3DBAF50D77E",
+    "settings": {
+        "urlPrefix": "http://localhost/",
+        "directAPI": "",
+        "spacesToIndent": "4",
+        "codeGenFormat": "Class",
+        "extPath": "http://extjs.cachefly.net/ext-3.3.1/",
+        "exportPath": ".",
+        "lineEnding": "CRLF",
+        "instantiateStore": true,
+        "exportXDSFiles": false,
+        "genTimestamps": false
+    },
+    "xdsVersion": "1.1.2",
+    "components": [
+        {
+            "id": "MyPanel",
+            "cid": "panel",
+            "jsClass": "pnlMenus",
+            "snapToGrid": 10,
+            "userConfig": {
+                "title": "Editor de menus",
+                "width": 400,
+                "height": 451,
+                "cls": "x-panel-mc",
+                "style": "padding-top:0;",
+                "bodyStyle": "padding:8px;"
+            },
+            "cn": [
+                {
+                    "id": "MyForm",
+                    "cid": "form",
+                    "jsClass": "MyForm",
+                    "snapToGrid": 10,
+                    "userConfig": {
+                        "title": "-ext-undefined-"
+                    },
+                    "cn": [
+                        {
+                            "id": "MyTextField1",
+                            "cid": "textfield",
+                            "jsClass": "MyTextField1",
+                            "snapToGrid": 10,
+                            "userConfig": {
+                                "fieldLabel": "id",
+                                "anchor": "100%",
+                                "name": "id",
+                                "autoRef": "txtId"
+                            }
+                        },
+                        {
+                            "id": "MyTextField",
+                            "cid": "textfield",
+                            "jsClass": "MyTextField",
+                            "snapToGrid": 10,
+                            "userConfig": {
+                                "fieldLabel": "Nombre",
+                                "anchor": "100%",
+                                "name": "nombre",
+                                "autoRef": "txtNombre"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "MyFieldSet",
+                    "cid": "fieldset",
+                    "jsClass": "MyFieldSet",
+                    "snapToGrid": 10,
+                    "userConfig": {
+                        "title": "Menus",
+                        "height": 317
+                    },
+                    "cn": [
+                        {
+                            "id": "MyGrid",
+                            "cid": "grid",
+                            "jsClass": "MyGrid",
+                            "snapToGrid": 10,
+                            "userConfig": {
+                                "title": "-ext-undefined-",
+                                "store": "stoMenus",
+                                "height": 212,
+                                "autoExpandColumn": "colNombre",
+                                "style": "border-width:1px;"
+                            },
+                            "cn": [
+                                {
+                                    "id": "MyColumn",
+                                    "cid": "gridcolumn",
+                                    "jsClass": "MyColumn",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "dataIndex": "string",
+                                        "header": "Nombre",
+                                        "sortable": true,
+                                        "resizable": "-ext-undefined-",
+                                        "width": 100,
+                                        "id": "colNombre"
+                                    }
+                                },
+                                {
+                                    "id": "MyPagingToolbar",
+                                    "cid": "pagingtoolbar",
+                                    "jsClass": "MyPagingToolbar",
+                                    "dock": "bbar",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "store": "stoMenus",
+                                        "style": "border-width:0px;"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "stores": [
+        {
+            "id": "MyStore",
+            "cid": "jsonstore",
+            "jsClass": "stoMenus",
+            "snapToGrid": 10,
+            "userConfig": {
+                "storeId": "stoMenus",
+                "root": "data",
+                "url": "menus/getMenus",
+                "messageProperty": "msg"
+            },
+            "cn": [
+                {
+                    "id": "MyField",
+                    "cid": "datafield",
+                    "jsClass": "MyField",
+                    "snapToGrid": 10,
+                    "userConfig": {
+                        "name": "id"
+                    }
+                },
+                {
+                    "id": "MyField1",
+                    "cid": "datafield",
+                    "jsClass": "MyField1",
+                    "snapToGrid": 10,
+                    "userConfig": {
+                        "name": "nombre"
+                    }
+                }
+            ]
+        }
+    ]
+}
