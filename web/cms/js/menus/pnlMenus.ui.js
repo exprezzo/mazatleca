@@ -11,36 +11,20 @@
 
 pnlMenusUi = Ext.extend(Ext.Panel, {
     title: 'Editor de menus',
-    width: 400,
+    width: 865,
     height: 451,
     cls: 'x-panel-mc',
     style: 'padding-top:0;',
     bodyStyle: 'padding:8px;',
+    layout: 'hbox',
     initComponent: function() {
         this.items = [
             {
-                xtype: 'form',
-                items: [
-                    {
-                        xtype: 'textfield',
-                        fieldLabel: 'id',
-                        anchor: '100%',
-                        name: 'id',
-                        ref: '../txtId'
-                    },
-                    {
-                        xtype: 'textfield',
-                        fieldLabel: 'Nombre',
-                        anchor: '100%',
-                        name: 'nombre',
-                        ref: '../txtNombre'
-                    }
-                ]
-            },
-            {
                 xtype: 'fieldset',
-                title: 'Menus',
+                title: 'Listado',
                 height: 317,
+                style: 'float:left;',
+                width: 400,
                 items: [
                     {
                         xtype: 'grid',
@@ -63,6 +47,40 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
                             store: 'stoMenus',
                             style: 'border-width:0px;'
                         }
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                title: 'Edición',
+                style: 'float:left;margin-left:30px;',
+                height: 317,
+                items: [
+                    {
+                        xtype: 'form',
+                        width: 300,
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: 'id',
+                                anchor: '100%',
+                                name: 'id',
+                                ref: '../../txtId'
+                            },
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: 'Nombre',
+                                anchor: '100%',
+                                name: 'nombre',
+                                ref: '../../txtNombre'
+                            },
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: 'Label',
+                                anchor: '100%',
+                                height: 240
+                            }
+                        ]
                     }
                 ]
             }

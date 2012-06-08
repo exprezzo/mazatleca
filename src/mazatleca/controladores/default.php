@@ -17,16 +17,20 @@ class DefaultController extends Controlador{
 	function contact($rutaContenido=null ){
 		$this->renderVista('CONTACT','default/contact.html.php');				
 	}
+	
+	//funcion generica para cargar vistas
+	function render(){
+	
+	}
 		
 	private function renderVista($menuText,$contenido){
 		$pagina= new Pagina();			
 		
-		$menu =  new Menu('default/menu2.html.php');		
+		$menu =  new Menu('default/menu_naturalist.html.php');		
 		$pagina->setSeccion('menu',$menu);	
 		$menu->setMenuActivo($menuText);
 		
-		$menuText='CONTACT';
-		
+		$menuText='CONTACT';		
 		$contenido='default/home.html.php';
 		$contenido =  new Vista($contenido, $menuText);
 		$pagina->setSeccion('page1',$contenido);
@@ -43,6 +47,9 @@ class DefaultController extends Controlador{
 		$contenido =  new Vista($contenido, $menuText);
 		$pagina->setSeccion('page4',$contenido);
 		
+		$contenido='default/cms.html.php';
+		$contenido =  new Vista($contenido, $menuText);
+		$pagina->setSeccion('page5',$contenido);
 		
 		$pagina->render();
 	}

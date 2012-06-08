@@ -16,12 +16,23 @@
 	//Cufon.replace('.selected', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#c1a681, #5e472f, #5e472f)'});	
 //Cufon.replace('h1', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#c1a681, #5e472f, #5e472f)'});	
 </script>
+<!--=========================================================================================
+								ext js 3.4
+ =========================================================================================-->
+
+<link rel="stylesheet" type="text/css" href="http://localhost/ext-3.4.0/resources/css/ext-all.css"/>
+<!--
+
+<link rel="stylesheet" type="text/css" href="js/ext-3.4.0/resources/css/xtheme-access.css"/>
+-->
+<link rel="stylesheet" type="text/css" href="http://localhost/ext-3.4.0/resources/css/xtheme-gray.css"/>
+<script type="text/javascript" src="http://localhost/ext-3.4.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="http://localhost/ext-3.4.0/ext-all-debug.js"></script>
 
 
 
 
-
-<script  src="web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
+<!--script  src="web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
 <script type="text/javascript" src="web/naturalist/js/slidePager.js"></script>
 <script type="text/javascript" src="web/naturalist/js/jquery.js"></script>
 <script type="text/javascript" src="web/naturalist/js/jquery.mousewheel.min.js"></script>
@@ -36,21 +47,18 @@
 <script src="web/naturalist/js/ui/jquery.ui.dialog.js" type="text/javascript"></script>
 <script src="web/naturalist/js/ui/jquery.effects.core.js" type="text/javascript"></script>
 <script type="text/javascript" src="web/naturalist/js/jquery_header.js"></script>
-<script type="text/javascript"> $(function(){ $("#faded").faded({ speed: 500, autoplay: 8000 }); });	</script>
+<script type="text/javascript"> $(function(){ $("#faded").faded({ speed: 500, autoplay: 8000 }); });	</script-->
 </head>
 <body >
 
 <div class="main">
 <div class="mid">
-
     <h1 class="left" style="margin-left:20px; padding-top: 20px;"><a href="#">Mazatleca Framework</a></h1>    
-
 <div class="clear"></div>
 
 <div class="header">
   <div class="inner-wrap">
-		<?php $this->renderSeccion('menu'); ?>
-		
+		<?php $this->renderSeccion('menu'); ?>		
   </div>
 </div>
 <div class="clear"></div>
@@ -60,28 +68,28 @@
 
 
 <div id="content">
-             		<!-- script begin -->
-							  <div id="faded" >
-										<ul class="show">
-                                                                  <li ><img alt="" src="images/slide_4.png" /></li>
-                                                                  <li ><img alt="" src="images/slide_2.png" /></li>
-                                                                  <li ><img alt="" src="images/slide_3.png" /></li>
-                                                                  <li ><img alt="" src="images/slide_1.png" /></li>
-                                                                  <li ><img alt="" src="images/slide_5.png" /></li>
-                                                                </ul>							
-                              </div>
-				<!-- script end -->          
-
-
-
+	<!-- script begin -->
+		  <div id="faded" >
+				<ul class="show">
+					  <li ><img alt="" src="images/slide_4.png" /></li>
+					  <li ><img alt="" src="images/slide_2.png" /></li>
+					  <li ><img alt="" src="images/slide_3.png" /></li>
+					  <li ><img alt="" src="images/slide_1.png" /></li>
+					  <li ><img alt="" src="images/slide_5.png" /></li>
+				</ul>							
+		  </div>
+		  
+	<!-- script end -->          
   <div class="inner-wrap"> <a href="#" class="prev"></a> <a href="#" class="next"></a>
-    <div class="conteiner">
-      <div class="extra-wrap">
-      
-<!--  /////////////////////////////////////  PAGES  /////////////////////////////////////////// -->
-		<?php   include 'contenido.html.php'; ?>
-      </div>
-    </div>
+		<div class="conteiner">
+			
+			  <div class="extra-wrap">			 					
+				 <!--=========================================================================================================
+				  PAGES  				  
+				  =========================================================================================================-->				
+				  <?php   $this->renderSeccion('contenido'); ?>
+			  </div>
+		</div>
   </div>
 </div>
 
@@ -165,7 +173,10 @@
 
 </div> 
 
-<script type="text/javascript"> Cufon.now();
+<script type="text/javascript"> 
+/*
+Cufon.now();
+
 $(function(){
 	$('#content .pages').slidePager({
 		pagernav:'div.header div.nav ul li',
@@ -174,7 +185,7 @@ $(function(){
 		borders:40
 	})
 });
- jQuery(".scroll-pane").jScrollPane();
+ jQuery(".scroll-pane").jScrollPane(); */
 </script>
 </div>
 </body>

@@ -22,56 +22,24 @@
             "snapToGrid": 10,
             "userConfig": {
                 "title": "Editor de menus",
-                "width": 400,
+                "width": 865,
                 "height": 451,
                 "cls": "x-panel-mc",
                 "style": "padding-top:0;",
-                "bodyStyle": "padding:8px;"
+                "bodyStyle": "padding:8px;",
+                "layout": "hbox"
             },
             "cn": [
-                {
-                    "id": "MyForm",
-                    "cid": "form",
-                    "jsClass": "MyForm",
-                    "snapToGrid": 10,
-                    "userConfig": {
-                        "title": "-ext-undefined-"
-                    },
-                    "cn": [
-                        {
-                            "id": "MyTextField1",
-                            "cid": "textfield",
-                            "jsClass": "MyTextField1",
-                            "snapToGrid": 10,
-                            "userConfig": {
-                                "fieldLabel": "id",
-                                "anchor": "100%",
-                                "name": "id",
-                                "autoRef": "txtId"
-                            }
-                        },
-                        {
-                            "id": "MyTextField",
-                            "cid": "textfield",
-                            "jsClass": "MyTextField",
-                            "snapToGrid": 10,
-                            "userConfig": {
-                                "fieldLabel": "Nombre",
-                                "anchor": "100%",
-                                "name": "nombre",
-                                "autoRef": "txtNombre"
-                            }
-                        }
-                    ]
-                },
                 {
                     "id": "MyFieldSet",
                     "cid": "fieldset",
                     "jsClass": "MyFieldSet",
                     "snapToGrid": 10,
                     "userConfig": {
-                        "title": "Menus",
-                        "height": 317
+                        "title": "Listado",
+                        "height": 317,
+                        "style": "float:left;",
+                        "width": 400
                     },
                     "cn": [
                         {
@@ -110,6 +78,68 @@
                                     "userConfig": {
                                         "store": "stoMenus",
                                         "style": "border-width:0px;"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MyFieldSet2",
+                    "cid": "fieldset",
+                    "jsClass": "MyFieldSet2",
+                    "snapToGrid": 10,
+                    "userConfig": {
+                        "title": "Edición",
+                        "style": "float:left;margin-left:30px;",
+                        "height": 317,
+                        "labelAlign": "top"
+                    },
+                    "cn": [
+                        {
+                            "id": "MyForm",
+                            "cid": "form",
+                            "jsClass": "MyForm",
+                            "snapToGrid": 10,
+                            "userConfig": {
+                                "title": "-ext-undefined-",
+                                "width": 300,
+                                "labelAlign": "top"
+                            },
+                            "cn": [
+                                {
+                                    "id": "MyTextField1",
+                                    "cid": "textfield",
+                                    "jsClass": "MyTextField1",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "fieldLabel": "id",
+                                        "anchor": "100%",
+                                        "name": "id",
+                                        "autoRef": "txtId"
+                                    }
+                                },
+                                {
+                                    "id": "MyTextField",
+                                    "cid": "textfield",
+                                    "jsClass": "MyTextField",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "fieldLabel": "Nombre",
+                                        "anchor": "100%",
+                                        "name": "nombre",
+                                        "autoRef": "txtNombre"
+                                    }
+                                },
+                                {
+                                    "id": "MyTextField2",
+                                    "cid": "textfield",
+                                    "jsClass": "MyTextField2",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "anchor": "100%",
+                                        "height": 240
                                     }
                                 }
                             ]
