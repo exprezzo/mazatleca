@@ -3,11 +3,11 @@
 <head>
 <title>Mazatleca Framework</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="web/naturalist/css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/web/naturalist/css/styles.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" media="screen" href="themes/base/jquery.ui.all.css" />
-<script src="web/naturalist/js/jquery-1.4.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="web/naturalist/js/cufon.js"></script>
-<script type="text/javascript" src="web/naturalist/js/English_italic_500.font.js"></script>
+<script src="/web/naturalist/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web/naturalist/js/cufon.js"></script>
+<script type="text/javascript" src="/web/naturalist/js/English_italic_500.font.js"></script>
 <script type="text/javascript">
 	Cufon.replace(".unselected");
 	//Cufon.replace('.unselected', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#FFFFFF, #99CCEE, #99CCFF)'});	

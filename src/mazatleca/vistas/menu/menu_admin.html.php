@@ -1,6 +1,6 @@
-<script type="text/javascript" src="web/cms/js/menus/pnlMenus.ui.js"></script>
-<script type="text/javascript" src="web/cms/js/menus/pnlMenus.js"></script>
-<script type="text/javascript" src="web/cms/js/menus/stoMenus.js"></script>
+<script type="text/javascript" src="/web/cms/js/menus/pnlMenus.ui.js"></script>
+<script type="text/javascript" src="/web/cms/js/menus/pnlMenus.js"></script>
+<script type="text/javascript" src="/web/cms/js/menus/stoMenus.js"></script>
 
 <script>
 
@@ -29,6 +29,6 @@ Ext.onReady(function() {
 
 </script>
 <!-- Incluir los archivos javascript-->
-<div id="panelMenus">
-	Panel Edicion
+<div id="panelMenus" style="margin-top:35px;margin-left:20px;">
+	
 </div>

@@ -5,7 +5,7 @@
 	
     RewriteEngine On
 		
-	RewriteRule ^menu 		 mazatleca_core/frontc.php/menu/render [NC,L]   # 
+	RewriteRule ^menu/index.html 		 mazatleca_core/frontc.php/menu/render [NC,L]   # 
 	RewriteRule ^index.html 		 mazatleca_core/frontc.php/default/home [NC,L]   # 
 	RewriteRule ^home.html 		 mazatleca_core/frontc.php/default/home [NC,L]       # 
 	RewriteRule ^index.php 		     mazatleca_core/frontc.php/default/home [NC,L]   # 

@@ -15,14 +15,17 @@ stoMenus = Ext.extend(Ext.data.JsonStore, {
         stoMenus.superclass.constructor.call(this, Ext.apply({
             storeId: 'stoMenus',
             root: 'data',
-            url: 'menus/getMenus',
+            url: '/menu/getMenus',
             messageProperty: 'msg',
             fields: [
                 {
                     name: 'id'
                 },
                 {
-                    name: 'nombre'
+                    name: 'titulo'
+                },
+                {
+                    name: 'contenido'
                 }
             ]
         }, cfg));

@@ -11,5 +11,16 @@ class MenuController extends Controlador{
 		$pagina->setSeccion('contenido',$menuAdmin);
 		$pagina->render();
 	}
+	function getMenus(){
+		$data=array(
+			'id'=>1,'titulo'=>'titulo','contenido'=>'contenido'
+		);
+		$resp= array(
+			'success'=>true,
+			'msg'=>'mensaje',
+			'data'=>$data
+		);
+		echo json_encode($resp);
+	}
 }
 ?>

@@ -35,7 +35,7 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
                         columns: [
                             {
                                 xtype: 'gridcolumn',
-                                dataIndex: 'string',
+                                dataIndex: 'titulo',
                                 header: 'Nombre',
                                 sortable: true,
                                 width: 100,
@@ -55,10 +55,13 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
                 title: 'Edición',
                 style: 'float:left;margin-left:30px;',
                 height: 317,
+                labelAlign: 'top',
+                flex: 1,
                 items: [
                     {
                         xtype: 'form',
                         width: 300,
+                        labelAlign: 'top',
                         items: [
                             {
                                 xtype: 'textfield',
