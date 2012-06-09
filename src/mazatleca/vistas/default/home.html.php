@@ -1,6 +1,29 @@
 <h1>&iquest;Que es esto de Mazatleca?</h1>
 <br>
-<span>
-Mazatleca es una arquitectura MVC dise&ntilde;ada para realizar p&aacute;ginas y sistemas web.<br>
-Todavia no llega a la categor&iacute;a de framework pero el nucleo ha estado creciendo incorporando funcionalidad gen&eacute;rica.
-<span>
+<div>
+	Es un template encontrado en internet: www.eltemplate.com
+</div>
+
+<div>
+	Es un cms creado para personalizar su contenido.
+</div>
+
+<div>
+	Es un sistema de votaci&oacute;n para rankear las personalizaciones.
+</div>
+<br>
+<div>
+	Ver El Template.
+</div>
+
+<div>
+	Ver el Administrador de contenido.
+</div>
+
+<div>
+	Ver el rankin.
+</div>
+
+<div>
+	Ver otros templates.
+</div>
