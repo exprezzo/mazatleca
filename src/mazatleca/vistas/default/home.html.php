@@ -25,5 +25,5 @@
 </div>
 
 <div>
-	Ver otros templates.
+	Ver otros templates administrables.
 </div>
