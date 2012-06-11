@@ -23,11 +23,11 @@
             "userConfig": {
                 "title": "Editor de menus",
                 "width": 865,
-                "height": 451,
+                "height": "-ext-undefined-",
                 "cls": "x-panel-mc",
                 "style": "padding-top:0;",
                 "bodyStyle": "padding:8px;",
-                "layout": "hbox"
+                "layout": "-ext-undefined-"
             },
             "cn": [
                 {
@@ -38,8 +38,8 @@
                     "userConfig": {
                         "title": "Listado",
                         "height": 317,
-                        "style": "float:left;",
-                        "width": 400
+                        "style": "-ext-undefined-",
+                        "width": 821
                     },
                     "cn": [
                         {
@@ -52,7 +52,8 @@
                                 "store": "stoMenus",
                                 "height": 279,
                                 "autoExpandColumn": "colNombre",
-                                "style": "border-width:1px;"
+                                "style": "border-width:1px;",
+                                "autoRef": "gridPaginas"
                             },
                             "cn": [
                                 {
@@ -61,7 +62,7 @@
                                     "jsClass": "MyColumn",
                                     "snapToGrid": 10,
                                     "userConfig": {
-                                        "dataIndex": "titulo",
+                                        "dataIndex": "texto_menu",
                                         "header": "Nombre",
                                         "sortable": true,
                                         "resizable": "-ext-undefined-",
@@ -91,8 +92,8 @@
                     "snapToGrid": 10,
                     "userConfig": {
                         "title": "Edición",
-                        "style": "float:left;margin-left:30px;",
-                        "height": 317,
+                        "style": "-ext-undefined-",
+                        "height": "-ext-undefined-",
                         "labelAlign": "top",
                         "flex": 1
                     },
@@ -104,10 +105,11 @@
                             "snapToGrid": 10,
                             "userConfig": {
                                 "title": "-ext-undefined-",
-                                "width": 300,
+                                "width": 799,
                                 "labelAlign": "top",
                                 "frame": true,
-                                "footer": "-ext-undefined-"
+                                "footer": "-ext-undefined-",
+                                "autoRef": "frmEdicion"
                             },
                             "cn": [
                                 {
@@ -131,7 +133,7 @@
                                     "userConfig": {
                                         "fieldLabel": "Nombre",
                                         "anchor": "100%",
-                                        "name": "nombre",
+                                        "name": "texto_menu",
                                         "autoRef": "txtNombre"
                                     }
                                 },
@@ -143,7 +145,10 @@
                                     "userConfig": {
                                         "fieldLabel": "Label",
                                         "anchor": "100%",
-                                        "height": 113
+                                        "height": 113,
+                                        "name": "contenido",
+                                        "id": "editorContenido",
+                                        "autoRef": "txtEditorContenido"
                                     }
                                 },
                                 {
@@ -157,13 +162,23 @@
                                     },
                                     "cn": [
                                         {
+                                            "id": "MyButton2",
+                                            "cid": "button",
+                                            "jsClass": "MyButton2",
+                                            "snapToGrid": 10,
+                                            "userConfig": {
+                                                "text": "Nuevo"
+                                            }
+                                        },
+                                        {
                                             "id": "MyButton1",
                                             "cid": "button",
                                             "jsClass": "MyButton1",
                                             "snapToGrid": 10,
                                             "userConfig": {
                                                 "text": "Aceptar",
-                                                "formBind": "-ext-undefined-"
+                                                "formBind": "-ext-undefined-",
+                                                "autoRef": "btnGuardar"
                                             }
                                         },
                                         {
@@ -213,7 +228,7 @@
                     "jsClass": "MyField1",
                     "snapToGrid": 10,
                     "userConfig": {
-                        "name": "titulo"
+                        "name": "texto_menu"
                     }
                 },
                 {

@@ -12,30 +12,28 @@
 pnlMenusUi = Ext.extend(Ext.Panel, {
     title: 'Editor de menus',
     width: 865,
-    height: 451,
     cls: 'x-panel-mc',
     style: 'padding-top:0;',
     bodyStyle: 'padding:8px;',
-    layout: 'hbox',
     initComponent: function() {
         this.items = [
             {
                 xtype: 'fieldset',
                 title: 'Listado',
                 height: 317,
-                style: 'float:left;',
-                width: 400,
+                width: 821,
                 items: [
                     {
                         xtype: 'grid',
                         store: 'stoMenus',
-                        height: 212,
+                        height: 279,
                         autoExpandColumn: 'colNombre',
                         style: 'border-width:1px;',
+                        ref: '../gridPaginas',
                         columns: [
                             {
                                 xtype: 'gridcolumn',
-                                dataIndex: 'titulo',
+                                dataIndex: 'texto_menu',
                                 header: 'Nombre',
                                 sortable: true,
                                 width: 100,
@@ -53,37 +51,60 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
             {
                 xtype: 'fieldset',
                 title: 'Edición',
-                style: 'float:left;margin-left:30px;',
-                height: 317,
                 labelAlign: 'top',
                 flex: 1,
                 items: [
                     {
                         xtype: 'form',
-                        width: 300,
+                        width: 799,
                         labelAlign: 'top',
+                        frame: true,
+                        ref: '../frmEdicion',
                         items: [
                             {
                                 xtype: 'textfield',
                                 fieldLabel: 'id',
                                 anchor: '100%',
                                 name: 'id',
+                                style: 'margin-top:5px;',
                                 ref: '../../txtId'
                             },
                             {
                                 xtype: 'textfield',
                                 fieldLabel: 'Nombre',
                                 anchor: '100%',
-                                name: 'nombre',
+                                name: 'texto_menu',
                                 ref: '../../txtNombre'
                             },
                             {
                                 xtype: 'textfield',
                                 fieldLabel: 'Label',
                                 anchor: '100%',
-                                height: 240
+                                height: 113,
+                                name: 'contenido',
+                                ref: '../../txtEditorContenido',
+                                id: 'editorContenido'
                             }
-                        ]
+                        ],
+                        bbar: {
+                            xtype: 'toolbar',
+                            style: 'border-width:1px;',
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    text: 'Nuevo'
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'Aceptar',
+                                    ref: '../../../btnGuardar'
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'MyButton'
+                                }
+                            ]
+                        }
                     }
                 ]
             }

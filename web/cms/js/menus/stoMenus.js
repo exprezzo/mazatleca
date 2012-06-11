@@ -22,7 +22,7 @@ stoMenus = Ext.extend(Ext.data.JsonStore, {
                     name: 'id'
                 },
                 {
-                    name: 'titulo'
+                    name: 'texto_menu'
                 },
                 {
                     name: 'contenido'

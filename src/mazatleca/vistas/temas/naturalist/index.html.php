@@ -79,7 +79,7 @@
       <div class="extra-wrap">
       
 <!--  /////////////////////////////////////  PAGES  /////////////////////////////////////////// -->
-		<?php   include 'contenido.html.php'; ?>
+		<?php   $this->renderSeccion('contenido');  ?>
       </div>
     </div>
   </div>

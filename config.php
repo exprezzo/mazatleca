@@ -21,4 +21,7 @@ $loader->register();*/
 
 define("APP_PATH","../src/mazatleca/");
 define("MZ_TEMA","temas/naturalist/index.html.php");
+
+define('HOST','localhost');
+define('DB_NAME','mazatleca');
 ?>
