@@ -12,9 +12,12 @@
 pnlMenusUi = Ext.extend(Ext.Panel, {
     title: 'Editor de menus',
     width: 865,
+    height: 400,
     cls: 'x-panel-mc',
     style: 'padding-top:0;',
     bodyStyle: 'padding:8px;',
+    layout: 'card',
+    activeItem: 0,
     initComponent: function() {
         this.items = [
             {
@@ -51,6 +54,7 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
             {
                 xtype: 'fieldset',
                 title: 'Edición',
+                height: 300,
                 labelAlign: 'top',
                 flex: 1,
                 items: [
@@ -61,14 +65,6 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
                         frame: true,
                         ref: '../frmEdicion',
                         items: [
-                            {
-                                xtype: 'textfield',
-                                fieldLabel: 'id',
-                                anchor: '100%',
-                                name: 'id',
-                                style: 'margin-top:5px;',
-                                ref: '../../txtId'
-                            },
                             {
                                 xtype: 'textfield',
                                 fieldLabel: 'Nombre',
@@ -82,8 +78,17 @@ pnlMenusUi = Ext.extend(Ext.Panel, {
                                 anchor: '100%',
                                 height: 113,
                                 name: 'contenido',
+                                hideLabel: true,
                                 ref: '../../txtEditorContenido',
                                 id: 'editorContenido'
+                            },
+                            {
+                                xtype: 'textfield',
+                                fieldLabel: 'id',
+                                anchor: '100%',
+                                name: 'id',
+                                style: 'margin-top:5px;',
+                                ref: '../../txtId'
                             }
                         ],
                         bbar: {

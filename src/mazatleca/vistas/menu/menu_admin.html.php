@@ -9,7 +9,7 @@ Ext.onReady(function() {
     Ext.QuickTips.init();
     Ext.onReady(function() {
     Ext.QuickTips.init();			
-		new pnlMenus({renderTo:'panelMenus'});
+	//	new pnlMenus({renderTo:'panelMenus'});
 		/*card = new Ext.Panel({
 			layout:'card',
 			activeItem: 0,
@@ -29,6 +29,10 @@ Ext.onReady(function() {
 
 </script>
 <!-- Incluir los archivos javascript-->
-<div id="panelMenus" style="margin-top:35px;margin-left:20px;">
-	
+<div id="panelMenus" style="margin-top:30px;margin-left:-5px;">
+	<form action="/menu/guardarPagina" METHOD="POST">
+	<input type="text" name="id" /><br><br>
+	<input type="text" name="texto_menu" /><br><br>
+	<textarea id="editorContenido" name="editor_data"></textarea>
+	</form>
 </div>

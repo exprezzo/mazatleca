@@ -23,11 +23,12 @@
             "userConfig": {
                 "title": "Editor de menus",
                 "width": 865,
-                "height": "-ext-undefined-",
+                "height": 400,
                 "cls": "x-panel-mc",
                 "style": "padding-top:0;",
                 "bodyStyle": "padding:8px;",
-                "layout": "-ext-undefined-"
+                "layout": "card",
+                "activeItem": 0
             },
             "cn": [
                 {
@@ -93,7 +94,7 @@
                     "userConfig": {
                         "title": "Edición",
                         "style": "-ext-undefined-",
-                        "height": "-ext-undefined-",
+                        "height": 300,
                         "labelAlign": "top",
                         "flex": 1
                     },
@@ -112,19 +113,6 @@
                                 "autoRef": "frmEdicion"
                             },
                             "cn": [
-                                {
-                                    "id": "MyTextField1",
-                                    "cid": "textfield",
-                                    "jsClass": "MyTextField1",
-                                    "snapToGrid": 10,
-                                    "userConfig": {
-                                        "fieldLabel": "id",
-                                        "anchor": "100%",
-                                        "name": "id",
-                                        "autoRef": "txtId",
-                                        "style": "margin-top:5px;"
-                                    }
-                                },
                                 {
                                     "id": "MyTextField",
                                     "cid": "textfield",
@@ -148,7 +136,21 @@
                                         "height": 113,
                                         "name": "contenido",
                                         "id": "editorContenido",
-                                        "autoRef": "txtEditorContenido"
+                                        "autoRef": "txtEditorContenido",
+                                        "hideLabel": true
+                                    }
+                                },
+                                {
+                                    "id": "MyTextField1",
+                                    "cid": "textfield",
+                                    "jsClass": "MyTextField1",
+                                    "snapToGrid": 10,
+                                    "userConfig": {
+                                        "fieldLabel": "id",
+                                        "anchor": "100%",
+                                        "name": "id",
+                                        "autoRef": "txtId",
+                                        "style": "margin-top:5px;"
                                     }
                                 },
                                 {

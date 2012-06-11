@@ -71,5 +71,10 @@ class MenuController extends Controlador{
 		);
 		echo json_encode($resp);	//Respondo en Json
 	}
+	
+	function editarPagina(){
+		
+	
+	}
 }
 ?>

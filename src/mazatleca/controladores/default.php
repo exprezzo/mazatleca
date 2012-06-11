@@ -24,9 +24,9 @@ class DefaultController extends Controlador{
 	}
 		
 	private function renderVista($menuText,$contenido){
-		#===================================================================================================
+		#==============================================================================================================================
 		#							OBTENGO EL CONTENIDO A MOSTRAR 
-		#===================================================================================================
+		#==============================================================================================================================
 		//Obtengo el modelo encargado de gestionr la informacion
 		$modelo=$this->getModelObject(); //TODO: Aplicar Singleton Pattern
 		//Solicita al modelo, las paginas registradas
@@ -35,9 +35,9 @@ class DefaultController extends Controlador{
 		$db=$modelo->getDb();
 		$sth=$db->prepare($sql);
 		$res=$sth->execute();	
-		#---------------------------------------------------------------------------------------------------
+		#--------------------------------------------------------------------------------------------------------------------------------
 		#				REVISAR ERROR TODO: pasar este bloque al nucleo, todavia no se si al modelo o al controlador, ¿o a la vista?
-		#---------------------------------------------------------------------------------------------------
+		#--------------------------------------------------------------------------------------------------------------------------------
 		if (!$res){
 			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, succes=false y eso;
 			print_r($sth->errorInfo() );
@@ -46,7 +46,11 @@ class DefaultController extends Controlador{
 		#---------------------------------------------------------------------------------------------------
 		$paginas= $sth->fetchAll(PDO::FETCH_ASSOC);			            #   <--eL CONTENIDO ESTA ALMACENADO EN PAGINAS
 		#---------------------------------------------------------------------------------------------------
-	
+		
+		
+		#===============================================================================================================================
+		#			Preparar las vistas
+		#===============================================================================================================================
 		$paginaObj= new Pagina();						
 		$menu =  new Menu('default/menu_cms.html.php');		
 		$menu->paginas=$paginas;
