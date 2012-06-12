@@ -24,6 +24,13 @@ Ext.onReady(function() {
 		});*/
 	});
 	CKEDITOR.replace( 'editorContenido' );
+	CKEDITOR.instances.editorContenido.on('afterCommandExec', handleAfterCommandExec);
+	function handleAfterCommandExec(event)
+	{		
+		if (event.data.name == undefined){
+			alert("Limpiar info");
+		}
+	}
 	
 });
 
@@ -31,8 +38,8 @@ Ext.onReady(function() {
 <!-- Incluir los archivos javascript-->
 <div id="panelMenus" style="margin-top:30px;margin-left:-5px;">
 	<form action="/menu/guardarPagina" METHOD="POST">
-	<input type="text" name="id" /><br><br>
-	<input type="text" name="texto_menu" /><br><br>
-	<textarea id="editorContenido" name="editor_data"></textarea>
+	<input type="hidden" name="id"  value="<?php echo $this->pagina['id']; ?> " /><br><br>
+	<input type="text" name="texto_menu" value="<?php echo $this->pagina['texto_menu']; ?>" /><br><br>
+	<textarea id="editorContenido" name="editor_data" ><?php echo  stripslashes($this->pagina['contenido']) ; ?></textarea>
 	</form>
 </div>

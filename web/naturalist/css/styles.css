@@ -1,6 +1,6 @@
 @import "reset.css";
 
-body {background:#0E76BD url(../images/bg_site.jpg); font-family:Arial;	font-size:12px;	line-height:16px;	color:#000;	margin:0; padding:0; text-align:}
+body {background:#0E76BD url(../images/bg_site.jpg); font-family:Arial;	font-size:12px;	/*line-height:16px;*/	color:#000;	margin:0; padding:0; text-align:}
 
 .clear {clear:both;}
 .left{ float:left}
@@ -9,7 +9,7 @@ a{ outline:none; color:#007BB9}
 a:hover{ text-decoration:none}
 
 /*==== GLOBAL =====*/
-.inner-wrap{font-family:Arial, Helvetica, sans-serif; line-height:18px}
+.inner-wrap{font-family:Arial, Helvetica, sans-serif; /*line-height:18px*/}
 .header{	height:50px;		margin:0; padding:0;  padding-top:15px; padding-bottom:20px}
 .footer {	height:50px;}
 .main{ width:1000px;  margin: 0 auto}

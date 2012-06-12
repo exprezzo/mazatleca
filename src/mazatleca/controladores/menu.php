@@ -8,7 +8,7 @@ class MenuController extends Controlador{
 		$menu= new Menu('menu/menu.html.php');
 		$pagina->setSeccion('menu',$menu);
 		
-		$menuAdmin = new Vista('menu/menu_admin.html.php','fgh'); 
+		$menuAdmin = new Vista('menu/paginas_listado.html.php','fgh'); 
 		$pagina->setSeccion('contenido',$menuAdmin);
 		$pagina->render();
 	}
@@ -28,13 +28,12 @@ class MenuController extends Controlador{
 		#				REVISAR ERROR
 		#===================================================================================================
 		if (!$res){
-			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, succes=false y eso;
+			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, success=false y eso;
 			print_r($sth->errorInfo() );
 			return false;
 		}	
 		#===================================================================================================	
-		
-		
+		header('Location: /menu/editarPagina?idPagina='.$_POST['id']);		
 	}
 	
 	function getMenus(){
@@ -72,8 +71,38 @@ class MenuController extends Controlador{
 	}
 	
 	function editarPagina(){
+		$idPagina=$_GET['idPagina'];
+		#========================================================================================================
+		//Obtengo el modelo encargado de gestionr la informacion
+		$modelo=$this->getModelObject(); //TODO: Aplicar Singleton Pattern
+		//Solicita al modelo, las paginas registradas
+		//TODO: $paginas=$modelo->getPaginas();	//al codigo siguiente convertirlo en esta funcion
+		$sql='SELECT * FROM cms_paginas WHERE id=:idPagina';		
+		$db=$modelo->getDb();
+		$sth=$db->prepare($sql);
+		$sth->bindValue(':idPagina',$idPagina);
+		$res=$sth->execute();	
+		#-----------------------------------------------------------------------------------------------------
+		#				REVISAR ERROR
+		#-----------------------------------------------------------------------------------------------------
+		if (!$res){
+			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, succes=false y eso;
+			print_r($sth->errorInfo() );
+			return false;
+		}	
+		#-----------------------------------------------------------------------------------------------------
+		$paginaObj= $sth->fetchAll(PDO::FETCH_ASSOC);
 		
-	
+		#========================================================================================================
+		$pagina=new Pagina('temas/naturalist/index_cms.html.php');
+		$menu= new Menu('menu/menu.html.php');
+		$pagina->setSeccion('menu',$menu);
+		
+		$menuAdmin = new Vista('menu/pagina_edit.html.php','fgh'); 
+		$menuAdmin->pagina=$paginaObj[0];
+		$pagina->setSeccion('contenido',$menuAdmin);
+		$pagina->render();
+		#========================================================================================================
 	}
 }
 ?>
