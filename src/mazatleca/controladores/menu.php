@@ -3,7 +3,6 @@
 
 class MenuController extends Controlador{
 
-
 	function render(){
 		$pagina=new Pagina('temas/naturalist/index_cms.html.php');
 		$menu= new Menu('menu/menu.html.php');
