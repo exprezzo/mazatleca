@@ -21,8 +21,8 @@ class PaginasController extends Controlador{
 	//funcion generica para cargar paginas
 	function render(){
 		/*
-		$pagina=$request->accion;
-		$vista="paginas/$pagina.html.php";
+		Buscar el archivo, si el arcchivo no existe, buscar en la tabla de paginas, si no existe, lanzar el error.
+		Notar que estoy combinando el nucleo del mvc con el cms, no olvidar esto para aligerarnos la existencia
 		*/
 		#==============================================================================================================================
 		#							OBTENGO EL CONTENIDO A MOSTRAR 
@@ -31,9 +31,11 @@ class PaginasController extends Controlador{
 		$modelo=$this->getModelObject(); //TODO: Aplicar Singleton Pattern
 		//Solicita al modelo, las paginas registradas
 		//TODO: $paginas=$modelo->getPaginas();	//al codigo siguiente convertirlo en esta funcion
-		$sql='SELECT * FROM cms_paginas where ';		
+		$codigo=$request->action;
+		$sql='SELECT * FROM cms_paginas where codigo=:codigo';		
 		$db=$modelo->getDb();
 		$sth=$db->prepare($sql);
+		$sth->bindValue('codigo',$codigo);
 		$res=$sth->execute();	
 		#--------------------------------------------------------------------------------------------------------------------------------
 		#				REVISAR ERROR TODO: pasar este bloque al nucleo, todavia no se si al modelo o al controlador, ¿o a la vista?

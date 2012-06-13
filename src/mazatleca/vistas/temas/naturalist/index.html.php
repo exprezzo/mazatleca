@@ -3,11 +3,11 @@
 <head>
 <title>Mazatleca Framework</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="web/naturalist/css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/web/naturalist/css/styles.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" media="screen" href="themes/base/jquery.ui.all.css" />
-<script src="web/naturalist/js/jquery-1.4.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="web/naturalist/js/cufon.js"></script>
-<script type="text/javascript" src="web/naturalist/js/English_italic_500.font.js"></script>
+<script src="/web/naturalist/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web/naturalist/js/cufon.js"></script>
+<script type="text/javascript" src="/web/naturalist/js/English_italic_500.font.js"></script>
 <script type="text/javascript">
 	Cufon.replace(".unselected");
 	//Cufon.replace('.unselected', {textShadow: '#37241d 1px 1px 1px', color: '-linear-gradient(#FFFFFF, #99CCEE, #99CCFF)'});	
@@ -21,21 +21,21 @@
 
 
 
-<script  src="web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
-<script type="text/javascript" src="web/naturalist/js/slidePager.js"></script>
-<script type="text/javascript" src="web/naturalist/js/jquery.js"></script>
-<script type="text/javascript" src="web/naturalist/js/jquery.mousewheel.min.js"></script>
-<script type="text/javascript" src="web/naturalist/js/jScrollPane.js"></script>
+<script  src="/web/naturalist/js/cufon-yui.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web/naturalist/js/slidePager.js"></script>
+<script type="text/javascript" src="/web/naturalist/js/jquery.js"></script>
+<script type="text/javascript" src="/web/naturalist/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/web/naturalist/js/jScrollPane.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="themes/base/jquery.ui.all.css" />
-<script src="web/naturalist/js/ui/jquery.ui.core.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.widget.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.mouse.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.draggable.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.position.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.resizable.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.ui.dialog.js" type="text/javascript"></script>
-<script src="web/naturalist/js/ui/jquery.effects.core.js" type="text/javascript"></script>
-<script type="text/javascript" src="web/naturalist/js/jquery_header.js"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.core.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.draggable.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.position.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.resizable.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.ui.dialog.js" type="text/javascript"></script>
+<script src="/web/naturalist/js/ui/jquery.effects.core.js" type="text/javascript"></script>
+<script type="text/javascript" src="/web/naturalist/js/jquery_header.js"></script>
 <script type="text/javascript"> $(function(){ $("#faded").faded({ speed: 500, autoplay: 8000 }); });	</script>
 </head>
 <body >
