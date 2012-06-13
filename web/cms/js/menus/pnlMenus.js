@@ -15,12 +15,13 @@ pnlMenus = Ext.extend(pnlMenusUi, {
         pnlMenus.superclass.initComponent.call(this);
 		this.gridPaginas.on( 'celldblclick' , function( grid, rowIndex, columnIndex, e ){
 			var rec=grid.store.getAt(rowIndex);
-			this.frmEdicion.getForm().loadRecord(rec);
-			console.log(rec.data.contenido);
-			CKEDITOR.instances.editorContenido.setData(rec.data.contenido);
+			//this.frmEdicion.getForm().loadRecord(rec);
+			window.open('/menu/editarPagina?idPagina='+rec.data.id);
+			//console.log(rec.data.contenido);
+			//CKEDITOR.instances.editorContenido.setData(rec.data.contenido);
 		}, this);
 		
-		this.btnGuardar.on('click',function(){
+		/*this.btnGuardar.on('click',function(){
 			this.frmEdicion.el.mask("Procesando la solicitud, por favor espere unos segundos");
 			var editor_data = CKEDITOR.instances.editorContenido.getData();
 			this.frmEdicion.getForm().submit({
@@ -34,6 +35,6 @@ pnlMenus = Ext.extend(pnlMenusUi, {
 					this.frmEdicion.el.unmask();
 				}
 			});
-		},this);
+		},this);*/
     }
 });
