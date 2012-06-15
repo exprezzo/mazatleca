@@ -1,18 +1,18 @@
 <div class="nav ">
-	  <ul>
+  <ul>
+	<?php
+		foreach ($this->paginas as $pagina){
+		?>
+				<li >
+					<a href="#page<?php echo $pagina['id']; ?>" rel="slide" class="<?php $this->getMenuState($pagina['texto_menu']); ?>" ><?php echo $pagina['texto_menu']; ?></a>
+				</li>		
 		<?php
-			foreach ($this->paginas as $pagina){
-			?>
-					<li >
-						<a href="#page<?php echo $pagina['id']; ?>" rel="slide" class="<?php $this->getMenuState($pagina['texto_menu']); ?>" ><?php echo $pagina['texto_menu']; ?></a>
-					</li>		
-			<?php
-			}
-		?>		
-		
-		
-	  </ul>
-	</div>
+		}
+	?>		
+	
+	
+  </ul>
+</div>
 
 <!--style type="text/css">
 	li.selected{

@@ -4,11 +4,36 @@
 class MenuController extends Controlador{
 
 	function render(){
+		#==============================================================================================================================
+		#							OBTENGO EL CONTENIDO A MOSTRAR 
+		#==============================================================================================================================
+		//Obtengo el modelo encargado de gestionr la informacion
+		$modelo=$this->getModelObject(); //TODO: Aplicar Singleton Pattern
+		//Solicita al modelo, las paginas registradas
+		//TODO: $paginas=$modelo->getPaginas();	//al codigo siguiente convertirlo en esta funcion
+		$sql='SELECT * FROM cms_paginas';		
+		$db=$modelo->getDb();
+		$sth=$db->prepare($sql);
+		$res=$sth->execute();	
+		#--------------------------------------------------------------------------------------------------------------------------------
+		#				REVISAR ERROR TODO: pasar este bloque al nucleo, todavia no se si al modelo o al controlador, ¿o a la vista?
+		#--------------------------------------------------------------------------------------------------------------------------------
+		if (!$res){
+			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, succes=false y eso;
+			print_r($sth->errorInfo() );
+			return false;
+		}	
+		#---------------------------------------------------------------------------------------------------
+		$paginas= $sth->fetchAll(PDO::FETCH_ASSOC);			            #   <----     eL CONTENIDO ESTA ALMACENADO EN PAGINAS
+		#---------------------------------------------------------------------------------------------------
+		#==============================================================================================================================
 		$pagina=new Pagina('temas/naturalist/index_cms.html.php');
 		$menu= new Menu('menu/menu.html.php');
+		$menu->paginas=$paginas;
 		$pagina->setSeccion('menu',$menu);
 		
-		$menuAdmin = new Vista('menu/paginas_listado.html.php','fgh'); 
+		//$menuAdmin = new Vista('menu/paginas_listado.html.php','fgh'); 
+		$menuAdmin = new Vista(); 
 		$pagina->setSeccion('contenido',$menuAdmin);
 		$pagina->render();
 	}
@@ -71,7 +96,7 @@ class MenuController extends Controlador{
 	}
 	
 	function editarPagina(){
-		$idPagina=$_GET['idPagina'];
+		$idPagina=$_GET['paginaId'];
 		#========================================================================================================
 		//Obtengo el modelo encargado de gestionr la informacion
 		$modelo=$this->getModelObject(); //TODO: Aplicar Singleton Pattern
@@ -92,10 +117,26 @@ class MenuController extends Controlador{
 		}	
 		#-----------------------------------------------------------------------------------------------------
 		$paginaObj= $sth->fetchAll(PDO::FETCH_ASSOC);
-		
+
+		#========================================================================================================
+		$sql='SELECT * FROM cms_paginas';		
+		$db=$modelo->getDb();
+		$sth=$db->prepare($sql);
+		$res=$sth->execute();	
+		#===================================================================================================
+		#				REVISAR ERROR
+		#===================================================================================================
+		if (!$res){
+			echo "Error: sql=".$sql; //TODO: RESPONDER EN JSON, succes=false y eso;
+			print_r($sth->errorInfo() );
+			return false;
+		}	
+		#===================================================================================================	
+		$paginas= $sth->fetchAll(PDO::FETCH_ASSOC);
 		#========================================================================================================
 		$pagina=new Pagina('temas/naturalist/index_cms.html.php');
 		$menu= new Menu('menu/menu.html.php');
+		$menu->paginas = $paginas;
 		$pagina->setSeccion('menu',$menu);
 		
 		$menuAdmin = new Vista('menu/pagina_edit.html.php','fgh'); 

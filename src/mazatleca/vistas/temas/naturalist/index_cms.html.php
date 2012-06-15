@@ -68,29 +68,7 @@
 
 
 <div id="content">
-	<!-- script begin -->
-		  <div id="faded" >
-				<ul class="show">
-					  <li ><img alt="" src="images/slide_4.png" /></li>
-					  <li ><img alt="" src="images/slide_2.png" /></li>
-					  <li ><img alt="" src="images/slide_3.png" /></li>
-					  <li ><img alt="" src="images/slide_1.png" /></li>
-					  <li ><img alt="" src="images/slide_5.png" /></li>
-				</ul>							
-		  </div>
-		  
-	<!-- script end -->          
-  <div class="inner-wrap"> <a href="#" class="prev"></a> <a href="#" class="next"></a>
-		<div class="conteiner">
-			
-			  <div class="extra-wrap">			 					
-				 <!--=========================================================================================================
-				  PAGES  				  
-				  =========================================================================================================-->				
-				  <?php   $this->renderSeccion('contenido'); ?>
-			  </div>
-		</div>
-  </div>
+	<?php   $this->renderSeccion('contenido'); ?>
 </div>
 
 
